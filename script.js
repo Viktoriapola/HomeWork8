@@ -45,25 +45,19 @@ const questions = [
 
 let answers = [];
 
-questions.forEach(function (item) {
-    if(prompt(`${item.question} ?`) === item.answer) {
-        answers.push('Верно')
+questions.forEach(function (item, index) {
+    if (prompt(`${item.question} ?`) === item.answer) {
+        answers.push(`Вопрос ${++index} Верно`);
     } else {
-        answers.push('Неверно')
-    }
+        answers.push(`Вопрос ${++index} Неверно`);
+    };
 
 });
 
-alert(`вопрос 1 - ${answers[0]}
-вопрос 2 - ${answers[1]}
-вопрос 3 - ${answers[2]}
-вопрос 4 - ${answers[3]}
-вопрос 5 - ${answers[4]}
-вопрос 6 - ${answers[5]}
-вопрос 7 - ${answers[6]}
-вопрос 8 - ${answers[7]}
-вопрос 9 - ${answers[8]}
-вопрос 10 - ${answers[9]}`)
+let str = answers.join('\n');
+alert(str);
+
+
 
 
 
@@ -72,24 +66,24 @@ alert(`вопрос 1 - ${answers[0]}
 
 //Задание 2
 
-let word = prompt("Введите слово","");
-let arrLetters = word.split('');
-let up = 0;
-let low = 0;
+// let word = prompt("Введите слово","");
+// let arrLetters = word.split('');
+// let up = 0;
+// let low = 0;
 
-arrLetters.forEach(function(item) {
-    if (item === item.toUpperCase()) {
-        up++;
-    } else {
-        low++;
-    };
+// arrLetters.forEach(function(item) {
+//     if (item === item.toUpperCase()) {
+//         up++;
+//     } else {
+//         low++;
+//     };
 
-});
+// });
 
-console.log(arrLetters);
-alert(`Общее количество букв: ${word.length}
-Верхний регистр: ${up}
-Нижний регистр: ${low}`);
+// console.log(arrLetters);
+// alert(`Общее количество букв: ${word.length}
+// Верхний регистр: ${up}
+// Нижний регистр: ${low}`);
 
 
 
@@ -97,25 +91,25 @@ alert(`Общее количество букв: ${word.length}
 
 // Задание 3
 
-const dataTypes = [
-    false,
-    's',
-    0,
-    null,
-    undefined,
-    {},
-    [],
-    10n,
-    Symbol(),
-    () => {},
-   ];
+// const dataTypes = [
+//     false,
+//     's',
+//     0,
+//     null,
+//     undefined,
+//     {},
+//     [],
+//     10n,
+//     Symbol(),
+//     () => {},
+//    ];
 
-   dataTypes.forEach(function (item) {
-       console.log(`   Значение: ${item}
-       преобразование к числу: ${Number(item)}
-       преобразование к строке: ${String(item)}
-       преобразование к булеву: ${Boolean(item)}`);
-   });
+//    dataTypes.forEach(function (item) {
+//        console.log(`   Значение: ${item}
+//        преобразование к числу: ${Number(item)}
+//        преобразование к строке: ${String(item)}
+//        преобразование к булеву: ${Boolean(item)}`);
+//    });
 
 
 
